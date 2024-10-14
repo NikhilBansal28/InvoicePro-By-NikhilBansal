@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Invoice</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f0f4f8; /* Light background for contrast */
+        }
+        nav {
+            background-color: #4A148C; /* Navbar background color */
+        }
+        .navbar-brand {
+            color: #76ff03; /* Navbar brand color */
+        }
+        h1 {
+            color: #4A148C; /* Main title color */
+        }
+        .form-label {
+            color: #4A148C; /* Label color */
+        }
+        .btn-primary {
+            background-color: #4A148C; /* Primary button color */
+            border-color: #4A148C; /* Border color for the button */
+        }
+        .btn-primary:hover {
+            background-color: #76ff03; /* Button hover color */
+        }
+        #invoicePreview {
+            background-color: white; /* Background for the invoice preview */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .table thead th {
+            background-color: #4A148C;
+            color: white;
+        }
+
+        /* Hide spinner for number input fields */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+
+        /* Styling for the Biller and Client Information */
+        .info-box {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+        }
+
+        .info-box h4 {
+            color: #4A148C;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #333;
+        }
+
+        /* Invoice Header (Date & Invoice Number) */
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .invoice-header h4 {
+            margin: 0;
+            color: #4A148C;
+        }
+
+        .invoice-header .invoice-info {
+            text-align: right;
+            color: #4A148C;
+            font-weight: bold;
+        }
+
+        /* Terms and Conditions */
+        .terms-conditions {
+            color: #4A148C;
+        }
+
+        .terms-conditions p {
+            color: #333;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html" title="Go back to Home">
+            <span style="color: #76ff03; font-weight: bold; font-size: 2rem;">Invoice</span>
+            <span style="color: #ffffff; font-weight: bold; font-size: 2rem;">Pro</span>
+            <small style="display: block; font-size: 0.8rem; color: #76ff03; text-align: center; margin-top: -10px;">An Invest Bug Product</small>
+        </a>
+    </nav>
+    
+    <div class="container mt-5">
+        <h1>Create Invoice</h1>
+        <form id="invoiceForm">
+            <!-- Biller Information -->
+            <h4>Biller Information</h4>
+            <div class="info-box">
+                <div class="form-group">
+                    <label for="billerName">Biller Name</label>
+                    <input type="text" class="form-control" id="billerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="billerEmail">Biller Email</label>
+                    <input type="email" class="form-control" id="billerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="billerMobile">Biller Mobile</label>
+                    <input type="tel" class="form-control" id="billerMobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="billerAddress">Biller Address</label>
+                    <textarea class="form-control" id="billerAddress" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="billerGST">Biller GST Number</label>
+                    <input type="text" class="form-control" id="billerGST" required>
+                </div>
+            </div>
+
+            <!-- Client Information -->
+            <h4>Client Information</h4>
+            <div class="info-box">
+                <div class="form-group">
+                    <label for="clientName">Client Name</label>
+                    <input type="text" class="form-control" id="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientEmail">Client Email</label>
+                    <input type="email" class="form-control" id="clientEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientMobile">Client Mobile</label>
+                    <input type="tel" class="form-control" id="clientMobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientAddress">Client Address</label>
+                    <textarea class="form-control" id="clientAddress" rows="3" required></textarea>
+                </div>
+            </div>
+
+            <!-- Invoice Details -->
+            <h4>Invoice Details</h4>
+            <div class="form-group">
+                <label for="itemDescription">Item Description</label>
+                <input type="text" class="form-control" id="itemDescription" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" required>
+            </div>
+            <div class="form-group">
+                <label for="tax">Tax %</label>
+                <input type="number" class="form-control" id="tax" required>
+            </div>
+            <div class="form-group">
+                <label for="invoiceDate">Invoice Date</label>
+                <input type="date" class="form-control" id="invoiceDate" required>
+            </div>
+
+            <!-- Digital Signature -->
+            <div class="form-group">
+                <label for="digitalSignature">Digital Signature</label>
+                <input type="file" class="form-control" id="digitalSignature" accept="image/*">
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-group">
+                <label for="termsConditions">Terms and Conditions</label>
+                <textarea class="form-control" id="termsConditions" rows="4" required>
+1. Payment must be received within 30 days.
+2. Late payments may incur additional fees.
+3. All sales are final.
+                </textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Generate Invoice</button>
+        </form>
+
+        <div id="invoicePreview" class="mt-5" style="display: none;">
+            <h2>Invoice Preview</h2>
+            <!-- Invoice Header -->
+            <div class="invoice-header">
+                <h4>Invoice No.: <span id="invoiceNumber"></span></h4>
+                <div class="invoice-info">
+                    <p>Invoice Date: <span id="previewInvoiceDate"></span></p>
+                </div>
+            </div>
+
+            <!-- Biller and Client Information -->
+            <div class="info-box">
+                <h4>Biller Details</h4>
+                <p id="previewBillerName"></p>
+                <p id="previewBillerEmail"></p>
+                <p id="previewBillerMobile"></p>
+                <p id="previewBillerAddress"></p>
+                <p id="previewBillerGST"></p>
+            </div>
+            <div class="info-box">
+                <h4>Client Details</h4>
+                <p id="previewClientName"></p>
+                <p id="previewClientEmail"></p>
+                <p id="previewClientMobile"></p>
+                <p id="previewClientAddress"></p>
+            </div>
+
+            <!-- Invoice Items -->
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Tax</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="previewItemDescription"></td>
+                        <td id="previewQuantity"></td>
+                        <td id="previewPrice"></td>
+                        <td id="previewTax"></td>
+                        <td id="previewTotal"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Terms and Conditions -->
+            <div class="terms-conditions">
+                <h4>Terms & Conditions</h4>
+                <p id="previewTermsConditions"></p>
+            </div>
+
+            <!-- Digital Signature -->
+            <div>
+                <img id="previewSignature" style="max-width: 200px;">
+            </div>
+
+            <!-- Download Invoice -->
+            <button id="downloadInvoice" class="btn btn-success mt-3">Download PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="invoice.js"></script>
+</body>
+</html>

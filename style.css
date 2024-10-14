@@ -1,0 +1,553 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    border-bottom: 2px solid #76ff03; /* Green border for modern look */
+    padding: 15px 0; /* Add padding for a more spacious look */
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.navbar-brand span {
+    display: inline-block; /* Make each part an inline-block */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.navbar-brand span:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.navbar-brand small {
+    display: block; /* Make it a block element */
+    font-size: 0.8rem; /* Adjust font size for the product line */
+    color: #76ff03; /* Green color for the product line */
+    text-align: center; /* Center align the text */
+    margin-top: -10px; /* Move it closer to the main title */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff; /* White color for navigation links */
+    padding: 10px 20px; /* Add padding to links */
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #76ff03; /* Green color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+
+#hero {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 60px 0; /* Increased padding for better spacing */
+}
+
+#hero h1 {
+    font-family: 'Arial', sans-serif; /* Update to a more modern font */
+    font-size: 3.5rem; /* Increase font size for better visibility */
+    color: #6f42c1; /* Purple color */
+    display: inline-flex; /* Align logo and text */
+    align-items: center; /* Center align */
+}
+
+.logo {
+    max-width: 50px; /* Control logo size */
+    margin-left: 10px; /* Space between text and logo */
+}
+
+#hero p {
+    font-size: 1.25rem; /* Slightly larger font size */
+    color: #343a40; /* Darker text for better readability */
+}
+
+.btn-success {
+    background-color: #28a745; /* Green button */
+    border: none; /* Remove border */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+
+/* About Section */
+#about {
+    padding: 60px 0;
+}
+
+/* Features Section Styles */
+#features {
+    background-color: #4B0082; /* Deep purple background */
+}
+
+.feature-box {
+    background-color: #6A5ACD; /* Slate blue for the feature boxes */
+    border-radius: 10px; /* Rounded corners for a premium look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.feature-icon {
+    color: #32CD32; /* Lime green color for icons */
+}
+
+h3, h5 {
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+p {
+    color: #E0E0E0; /* Light gray for text */
+}
+
+
+#happy-users {
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+.user-feedback {
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.user-feedback:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Adjust the text colors */
+.user-feedback p {
+    color: #0d47a1; /* Blue text for feedback */
+}
+
+.user-feedback h5 {
+    color: #ffd600; /* Gold text for user names */
+}
+
+.feedbacker-name {
+    color: #4caf50; /* Green color for the feedbacker's name */
+    font-weight: bold; /* Optional: make the name bold */
+}
+
+
+#news {
+    background-color: #f9f9f9;
+}
+
+#news-articles .card {
+    margin: 0 auto; /* Center the card */
+    max-width: 400px; /* Set a max-width for the cards */
+    height: 100%; /* Ensure the cards fill the available height */
+    border: 1px solid #e2e2e2; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.card img {
+    max-height: 150px; /* Limit the height of images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-top-left-radius: 10px; /* Rounded corners on the top */
+    border-top-right-radius: 10px; /* Rounded corners on the top */
+}
+
+.card-body {
+    padding: 20px; /* Add padding inside the card */
+}
+
+.card-title {
+    color: #007BFF; /* Premium color for title */
+}
+
+.card-text {
+    color: #4A4A4A; /* Color for description */
+}
+
+.carousel-item {
+    display: flex; /* Flex layout for better alignment */
+    justify-content: center; /* Center the cards in the carousel */
+    align-items: stretch; /* Align cards to stretch */
+}
+
+.title-purple {
+    color: #6f2c91; /* Purple color */
+}
+
+.title-green {
+    color: #4caf50; /* Green color */
+}
+#footer {
+    background-color: #2b2e33; /* Dark background */
+    padding: 20px 0; /* Padding for overall spacing */
+}
+
+.footer-link {
+    color: #4caf50; /* Green for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+h5 {
+    color: #f0f4f8; /* Light color for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+p {
+    color: #e0e0e0; /* Light gray for paragraph text */
+    margin-bottom: 5px; /* Space below paragraphs */
+}
+
+.social-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.social-links li {
+    margin-bottom: 5px; /* Space between social links */
+}
+
+#about-invoicepro {
+    background-color: #3a3d42; /* Darker background for contrast */
+    padding: 40px 0; /* Padding for spacing */
+    border-bottom: 3px solid #4caf50; /* Border to separate from next section */
+}
+
+h2 {
+    color: #4caf50; /* Green color for main title */
+}
+
+h5 {
+    color: #f0f4f8; /* Light color for subtitle */
+}
+
+p {
+    color: #e0e0e0; /* Light gray for paragraph text */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.btn-success {
+    background-color: #4caf50; /* Button color */
+    border: none; /* Remove border */
+}
+
+.btn-success:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add this CSS to style.css */
+#invoicePreview {
+    font-family: Arial, sans-serif; /* Use a clean font for the invoice */
+    color: #0d47a1; /* Primary color */
+    background-color: #f0f4f8; /* Light background for contrast */
+    padding: 20px;
+    border: 1px solid #0d47a1; /* Border matching the primary color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#invoicePreview h2 {
+    color: #ffd600; /* Gold color for headings */
+}
+
+.invoice-item {
+    margin-bottom: 10px; /* Spacing between items */
+}
+
+/* Add additional styles as needed */
+
+
+
+
+
+/* Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+nav {
+    background-color: #4A148C; /* Navbar background color */
+}
+
+.navbar-brand {
+    color: #76ff03; /* Navbar brand color */
+}
+
+h1 {
+    color: #4A148C; /* Main title color */
+}
+
+h4 {
+    color: #4A148C; /* Section headers color */
+}
+
+.form-label {
+    color: #4A148C; /* Label color */
+}
+
+.btn-primary {
+    background-color: #4A148C; /* Primary button color */
+    border-color: #4A148C; /* Border color for the button */
+}
+
+.btn-primary:hover {
+    background-color: #76ff03; /* Button hover color */
+}
+
+.btn-success {
+    background-color: #28a745; /* Success button color */
+    border-color: #28a745; /* Border color for the button */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Success button hover */
+}
+
+/* Invoice Preview Styling */
+#invoicePreview {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Table Styling */
+.table thead th {
+    background-color: #4A148C;
+    color: white;
+}
+
+.table tbody td {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Make the form fields full-width and consistent */
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    width: 100%;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    #invoicePreview .row {
+        flex-direction: column;
+    }
+    .col-md-6 {
+        width: 100%;
+    }
+}
+
+/* Styling for Digital Signature */
+#previewSignature {
+    max-width: 200px;
+    display: block;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* Box Styling for Biller and Client Info */
+.info-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.info-box h4 {
+    margin-bottom: 10px;
+    color: #4A148C;
+}
+
+/* Right Alignment of Invoice Number and Date */
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.invoice-header h4 {
+    margin: 0;
+    color: #4A148C;
+}
+
+.invoice-header p {
+    margin: 0;
+    text-align: right;
+    color: #4A148C;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+h1, h4 {
+    color: #4A148C; /* Purple color */
+}
+
+.navbar {
+    background-color: #4A148C;
+}
+
+.navbar-brand {
+    color: #76ff03; /* Green color */
+}
+
+.form-label {
+    color: #4A148C;
+}
+
+.info-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.info-box h4 {
+    color: #4A148C;
+}
+
+.terms-conditions {
+    color: #4A148C;
+}
+
+.terms-conditions p {
+    color: #333;
+    white-space: pre-line;
+}
+
+.table thead th {
+    background-color: #4A148C;
+    color: white;
+}
+
+
+
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+h1, h4 {
+    color: #4A148C; /* Purple color */
+}
+
+.navbar {
+    background-color: #4A148C;
+}
+
+.navbar-brand {
+    color: #76ff03; /* Green color */
+}
+
+.form-label {
+    color: #4A148C;
+}
+
+.info-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.info-box h4 {
+    color: #4A148C;
+}
+
+.info-box p {
+    color: #333;
+}
+
+.terms-conditions {
+    color: #4A148C;
+}
+
+.terms-conditions p {
+    color: #333;
+    white-space: pre-line;
+}
+
+.table thead th {
+    background-color: #4A148C;
+    color: white;
+}
+
+/* Invoice Header (Date & Invoice Number) */
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.invoice-header h4 {
+    margin: 0;
+    color: #4A148C;
+}
+
+.invoice-header .invoice-info {
+    text-align: right;
+    color: #4A148C;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Added font size adjustment for PDF */
+#invoicePreview {
+    font-size: 0.85rem; /* Adjusted font size to fit more content */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed; /* Forces the table to fit within the page width */
+}
+
+td, th {
+    padding: 8px;
+    word-wrap: break-word; /* Ensures text breaks properly within the table */
+}
